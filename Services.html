@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CyberShield</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ff00;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-color: #e0e0e0;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+        
+        .navbar-brand {
+            color: var(--primary-color) !important;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .hero-section {
+            position: relative;
+            background-color: #000;
+            background-image: url('Firewall.png');
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px var(--primary-color);
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px var(--primary-color); }
+            50% { text-shadow: -2px 0 var(--primary-color), 2px 0 #ff0000; }
+            100% { text-shadow: 0 0 10px var(--primary-color); }
+        }
+        
+        .search-box {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        
+        .search-input {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 0;
+            padding: 10px 20px;
+        }
+        
+        .search-input:focus {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: var(--primary-color);
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        
+        .category-btn {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            border-radius: 0;
+            padding: 8px 20px;
+            margin: 5px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary-color);
+            color: black;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 0 20px var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--primary-color);
+        }
+        
+        .card-body {
+            color: var(--text-color);
+        }
+        
+        .add-to-cart {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 0;
+            padding: 5px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--primary-color);
+            color: black;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .floating-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        
+        .animated-logo {
+            width: 150px;
+            height: 150px;
+            opacity: 0.3;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+        
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+        
+        .hero-title {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                CyberShield
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product.html">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <div class="floating-logo">
+                <img src="logo.png" alt="Logo" class="animated-logo">
+            </div>
+            <h1 class="hero-title">Layanan Kami</h1>
+        </div>
+    </div>
+
+    <!-- Services List -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Konsultasi Keamanan</h5>
+                        <p class="card-text">Saran ahli untuk meningkatkan postur keamanan siber Anda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Penetration Testing</h5>
+                        <p class="card-text">Identifikasi kerentanan dalam sistem Anda sebelum peretas melakukannya.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Incident Response</h5>
+                        <p class="card-text">Respons dan pemulihan yang cepat dari insiden keamanan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
